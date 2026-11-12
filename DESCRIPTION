@@ -1,0 +1,11 @@
+Package: tennismatches
+Title: Retrieve and Plot Tennis Career Matches
+Version: 0.0.1
+Authors@R: person("Timmy", "Ojeda-Silva",
+    email = "ojedasilvat@berkeley.edu", role = c("aut", "cre"))
+Description: Retrieves career match data from Tennis Abstract and plots
+    the age difference between a player and their opponents by match outcome.
+License: GPL-3
+Encoding: UTF-8
+Imports:
+    stringr
