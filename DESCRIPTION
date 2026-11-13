@@ -8,6 +8,8 @@ Description: Retrieves career match data from Tennis Abstract and plots
 License: GPL-3
 Encoding: UTF-8
 Imports:
-    stringr
+    stringr,
+    ggplot2,
+    rlang
 Suggests:
     testthat
