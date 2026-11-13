@@ -54,48 +54,28 @@ plot_career_matches(nadal)
 
 ## Repository structure
 
-
-
 ```text
-
 hw03-3-ojedat1/
-
-|-- DESCRIPTION
-
-|-- NAMESPACE
-
-|-- README.md
-
-|-- R/
-
-|   |-- clean_matches.R
-
-|   |-- fetch_career_lines.R
-
-|   |-- get_career_matches.R
-
-|   |-- parse_matches.R
-
-|   |-- parse_player_dob.R
-
-|   `-- plot_career_matches.R
-
-|-- man/
-
-|   |-- get_career_matches.Rd
-
-|   `-- plot_career_matches.Rd
-
-`-- tests/
-
-&#x20;   |-- testthat.R
-
-&#x20;   `-- testthat/
-
-&#x20;       |-- test-clean-matches.R
-
-&#x20;       `-- test-parse-matches.R
-
+├── .Rbuildignore
+├── DESCRIPTION
+├── NAMESPACE
+├── README.md
+├── instructions.md
+├── R/
+│   ├── clean_matches.R
+│   ├── fetch_career_lines.R
+│   ├── get_career_matches.R
+│   ├── parse_matches.R
+│   ├── parse_player_dob.R
+│   └── plot_career_matches.R
+├── man/
+│   ├── get_career_matches.Rd
+│   └── plot_career_matches.Rd
+└── tests/
+    ├── testthat.R
+    └── testthat/
+        ├── test-clean-matches.R
+        └── test-parse-matches.R
 ```
 
 
