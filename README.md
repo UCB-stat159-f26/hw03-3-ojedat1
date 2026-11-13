@@ -1,4 +1,4 @@
-\# tennismatches
+﻿# tennismatches
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-\## Installation
+## Installation
 
 
 
@@ -14,19 +14,19 @@
 
 ```r
 
-\# install.packages("devtools")
+# install.packages("devtools")
 
-devtools::install\_github("UCB-stat159-f26/hw03-3-ojedat1")
+devtools::install_github("UCB-stat159-f26/hw03-3-ojedat1")
 
 ```
 
 
 
-\## Usage
+## Usage
 
 
 
-`get\_career\_matches()` requires an internet connection. It returns a data frame with one row per match, including the match date, tournament, surface, result, opponent, both ages, and the age difference in years.
+`get_career_matches()` requires an internet connection. It returns a data frame with one row per match, including the match date, tournament, surface, result, opponent, both ages, and the age difference in years.
 
 
 
@@ -36,23 +36,23 @@ library(tennismatches)
 
 
 
-serena <- get\_career\_matches("Serena Williams")
+serena <- get_career_matches("Serena Williams")
 
 head(serena)
 
-plot\_career\_matches(serena)
+plot_career_matches(serena)
 
 
 
-nadal <- get\_career\_matches("Rafael Nadal")
+nadal <- get_career_matches("Rafael Nadal")
 
-plot\_career\_matches(nadal)
+plot_career_matches(nadal)
 
 ```
 
 
 
-\## Repository structure
+## Repository structure
 
 
 
@@ -68,23 +68,23 @@ hw03-3-ojedat1/
 
 |-- R/
 
-|   |-- clean\_matches.R
+|   |-- clean_matches.R
 
-|   |-- fetch\_career\_lines.R
+|   |-- fetch_career_lines.R
 
-|   |-- get\_career\_matches.R
+|   |-- get_career_matches.R
 
-|   |-- parse\_matches.R
+|   |-- parse_matches.R
 
-|   |-- parse\_player\_dob.R
+|   |-- parse_player_dob.R
 
-|   `-- plot\_career\_matches.R
+|   `-- plot_career_matches.R
 
 |-- man/
 
-|   |-- get\_career\_matches.Rd
+|   |-- get_career_matches.Rd
 
-|   `-- plot\_career\_matches.Rd
+|   `-- plot_career_matches.Rd
 
 `-- tests/
 
@@ -100,7 +100,7 @@ hw03-3-ojedat1/
 
 
 
-\## Tests
+## Tests
 
 
 
@@ -118,15 +118,15 @@ devtools::check()
 
 
 
-\## Personal reflection
+## Personal reflection
 
 
 
-Turning my Serena Williams plot from HW02 into a function helped me understand how `ggplot2` finds columns inside `aes()`. For example, `.data$player\_age` tells `ggplot2` to use the `player\_age` column from the data frame I pass to the function. I used the same approach to map `age\_difference` to the y-axis and `result` to color. Once those mappings were in place, I could use the same function to plot both Serena Williams and Rafael Nadal.
+Turning my Serena Williams plot from HW02 into a function helped me understand how `ggplot2` finds columns inside `aes()`. For example, `.data$player_age` tells `ggplot2` to use the `player_age` column from the data frame I pass to the function. I used the same approach to map `age_difference` to the y-axis and `result` to color. Once those mappings were in place, I could use the same function to plot both Serena Williams and Rafael Nadal.
 
 
 
-I also learned how to turn manual checks in the RStudio console into automated tests with `testthat`. I used small inputs and `expect\_identical()` or `expect\_equal()` to compare the output with what I expected. One test checks that the parser preserves empty fields so later values stay in the right positions. Another checks both ways the files represent an opponent's age. One format provides a birth date, and the other provides the age directly.
+I also learned how to turn manual checks in the RStudio console into automated tests with `testthat`. I used small inputs and `expect_identical()` or `expect_equal()` to compare the output with what I expected. One test checks that the parser preserves empty fields so later values stay in the right positions. Another checks both ways the files represent an opponent's age. One format provides a birth date, and the other provides the age directly.
 
 
 
